@@ -14,6 +14,7 @@ var Set = (function(){
     initCheckNoSet();  
     initHint();  
     initRestart();
+    colorScore();
   }
 
   function initRestart(){
@@ -119,7 +120,7 @@ var Set = (function(){
 
       } else {
 
-        increaseScore();
+        increaseScore(false);
 
         generateAdditionalCardsNoSet();
 
@@ -129,6 +130,35 @@ var Set = (function(){
     });
 
   } 
+
+  function colorScore(){
+
+    switch (true){
+
+      case (this.score < 0):
+        $('#final-score').css('color', 'red');
+        break;
+      case (this.score > 0 && this.score < 10):
+        $('#final-score').css('color', 'yellow');
+        break;
+      case (this.score >= 10 && this.score < 20):
+        $('#final-score').css('color', 'orange');
+        break;
+      case (this.score >= 20 && this.score < 30):
+        $('#final-score').css('color', 'green');
+        break;
+      case (this.score >= 30 && this.score < 40):
+        $('#final-score').css('color', 'blue');
+        break;
+      case (this.score >= 40 && this.score < 50):
+        $('#final-score').css('color', 'brown');
+        break;
+      case (this.score >= 50):
+        $('#final-score').css('color', 'black');
+        break;
+    }
+
+  }
 
   function initHint(){
 
@@ -149,6 +179,7 @@ var Set = (function(){
       if (data.length > 0){
 
         $('#' + data[0]).css('animation-duration', '5s');
+
         $('#' + data[0]).css('animation-name', 'showHint');
 
         decreaseScore('Penalty 1p!');
@@ -183,7 +214,7 @@ var Set = (function(){
       (((sets[0][1] == sets[1][1]) && (sets[1][1] == sets[2][1])) || ((sets[0][1] != sets[1][1]) && (sets[1][1] != sets[2][1]) && (sets[0][1] != sets[2][1]))) && 
       (((sets[0][2] == sets[1][2]) && (sets[1][2] == sets[2][2])) || ((sets[0][2] != sets[1][2]) && (sets[1][2] != sets[2][2]) && (sets[0][2] != sets[2][2])))){     
 
-      increaseScore();      
+      increaseScore(true);      
 
     } else {    
 
@@ -193,7 +224,7 @@ var Set = (function(){
 
   }
 
-  function increaseScore(){
+  function increaseScore(bool){
 
     console.log('You found a set!! => ', this.set);
 
@@ -201,9 +232,15 @@ var Set = (function(){
 
     $('#final-score').html(this.score);
 
+    colorScore();
+
     $('.w2p_flash').slideUp();
 
-    replaceCards();
+    if (bool == true) {
+
+      replaceCards();
+
+    }
 
   }
 
@@ -216,6 +253,8 @@ var Set = (function(){
     this.score -= 1;
 
     $('#final-score').html(this.score);
+
+    colorScore();
 
     $('.card').removeClass('selected');
 
