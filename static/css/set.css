@@ -1,0 +1,62 @@
+.game-container{
+  background-color: #e6eaee;
+}
+
+.card{
+  
+  background: #fff;
+}
+
+
+.diamond{
+  transform: rotate(90deg);
+}
+
+.card.active{
+  cursor: pointer;
+  box-shadow: 8px 8px 6px 0 rgba(201,195,201,1);
+}
+
+.card.selected{
+  box-shadow: 8px 8px 6px 0 rgba(0,0,0,.75);
+}
+
+.card-container{
+  float: left;
+  width: 113px;
+  margin: 15px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.lead{
+  margin: 15px 0 0 30px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+@keyframes showHint {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#final-score{
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.row.buttons{
+  margin-top: 20px;
+}

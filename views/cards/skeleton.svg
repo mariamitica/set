@@ -1,0 +1,31 @@
+<svg width="0" height="0">
+  <defs>
+    <pattern id="ellipse-striped-red" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect x="0" y="0" width="4" height="8" style="stroke:none; fill:red;" />
+    </pattern>
+    <pattern id="squiggly-striped-red" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect x="0" y="0" width="2" height="8" style="stroke:none; fill:red;" />
+    </pattern>
+    <pattern id="rect-striped-red" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" >
+      <rect x="0" y="0" width="4" height="8" style="stroke:none; fill:red;" />
+    </pattern>
+    <pattern id="ellipse-striped-blue" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect x="0" y="0" width="4" height="8" style="stroke:none; fill:#920097;" />
+    </pattern>
+    <pattern id="squiggly-striped-blue" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect x="0" y="0" width="2" height="8" style="stroke:none; fill:#920097;" />
+    </pattern>
+    <pattern id="rect-striped-blue" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" >
+      <rect x="0" y="0" width="4" height="8" style="stroke:none; fill:#920097;" />
+    </pattern>
+    <pattern id="ellipse-striped-green" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect x="0" y="0" width="4" height="8" style="stroke:none; fill:#1ac000;" />
+    </pattern>
+    <pattern id="squiggly-striped-green" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect x="0" y="0" width="2" height="8" style="stroke:none; fill:#1ac000;" />
+    </pattern>
+    <pattern id="rect-striped-green" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" >
+      <rect x="0" y="0" width="4" height="8" style="stroke:none; fill:#1ac000;" />
+    </pattern>
+  </defs>
+</svg>

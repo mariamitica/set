@@ -1,0 +1,29 @@
+svg{
+  stroke-width: 8;
+}
+
+.red{
+  stroke: red;
+}
+.blue{
+  stroke: #920097;
+}
+.green{
+  stroke: #1ac000;
+}
+
+.empty{
+  fill: none;
+}
+
+.red.full{
+  fill: red;
+}
+
+.blue.full{
+  fill: #920097;
+}
+
+.green.full{
+  fill: #1ac000;
+}
